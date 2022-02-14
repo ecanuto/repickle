@@ -1,0 +1,38 @@
+{
+    "python.defaultInterpreterPath": ".venv/bin/python",
+    // format
+    "python.formatting.provider": "black",
+    "python.formatting.blackArgs": [
+        "--line-length=100",
+        "--target-version=py38"
+    ],
+    // lint
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Args": [
+        "--max-line-length=100",
+        "--ignore=E402,W503,E712"
+    ],
+    // test
+    "python.testing.unittestEnabled": true,
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        ".",
+        "-p",
+        "*test*.py"
+    ],
+    // exclude files/folders
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "**/__pycache__": true,
+        "**/.pytest_cache": true,
+        "**/*.egg-info": true,
+        ".venv": true,
+        ".coverage": true
+    },
+    // file mode (syntax highlight)
+    "files.associations": {
+        "Makefile.inc": "make"
+    }
+}
